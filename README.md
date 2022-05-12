@@ -1,0 +1,2 @@
+# nonebot_plugin_realesrgan
+使用Real-ESRGAN进行图片放大的nonebot插件
