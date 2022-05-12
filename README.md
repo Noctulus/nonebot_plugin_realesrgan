@@ -6,7 +6,7 @@
 
 ## 环境配置
 
-1. 参考[安装 | NoneBot](https://v2.nonebot.dev/guide/installation.html)安装NoneBot和OneBot V11适配器，并参考[创建一个完整的项目 | NoneBot](https://v2.nonebot.dev/guide/creating-a-project.html)创建一个Bot实例；
+1. 参考[安装 | NoneBot](https://v2.nonebot.dev/docs/start/installation)安装NoneBot和OneBot V11适配器，并参考[创建一个完整的项目 | NoneBot](https://v2.nonebot.dev/docs/tutorial/create-project)创建一个Bot实例；
 2. 确保 [PyTorch >= 1.7](https://pytorch.org/) 已安装；
 3. 将本插件 `clone` 到插件目录；
 4. 运行 `pip install -r requirements.txt` 安装依赖包；
