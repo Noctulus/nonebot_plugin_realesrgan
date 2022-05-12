@@ -43,8 +43,8 @@ upscale_title_4x = 256
   
 ## TODO
 
-- [] 使用 Poetry 打包及发布
-- [] 上传至 Nonebot 商店
-- [] 支持分群开启
-- [] 增加指令CD
+- [ ] 使用 Poetry 打包及发布
+- [ ] 上传至 Nonebot 商店
+- [ ] 支持分群开启
+- [ ] 增加指令CD
 - [x] 咕咕咕~
