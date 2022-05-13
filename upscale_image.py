@@ -47,10 +47,16 @@ async def upscale_image(image, output_path: str) -> None:
     if os.path.isfile(model_path) == False:
         urlretrieve(model_url, model_path)
     output, _ = upscaler.enhance(image, outscale=2)
-    cv2.imwrite(output_path, output, [cv2.IMWRITE_PNG_COMPRESSION, 6])
+    if config.upscale_output_ext == 'png':
+        cv2.imwrite(output_path, output, [cv2.IMWRITE_PNG_COMPRESSION, config.upscale_png_compression])
+    else:
+        cv2.imwrite(output_path, output, [cv2.IMWRITE_JPEG_QUALITY, config.upscale_jpg_quality])
 
 async def upscale_image_4x(image, output_path: str) -> None:
     if os.path.isfile(model_4x_path) == False:
         urlretrieve(model_4x_url, model_4x_path)
     output, _ = upscaler_4x.enhance(image, outscale=4)
-    cv2.imwrite(output_path, output, [cv2.IMWRITE_PNG_COMPRESSION, 6])
+    if config.upscale_output_ext == 'png':
+        cv2.imwrite(output_path, output, [cv2.IMWRITE_PNG_COMPRESSION, config.upscale_png_compression])
+    else:
+        cv2.imwrite(output_path, output, [cv2.IMWRITE_JPEG_QUALITY, config.upscale_jpg_quality])

@@ -55,8 +55,8 @@ async def handle_image_upscale(event: MessageEvent) -> None:
     image_urls = get_image_urls(message)
     if not image_urls:
         await IMAGE_UPSCALE_MODE.reject()    
-    filename = str(random.random()) + ".png" # 使用随机数确保并发处理时不会互相冲突（假装具有并发处理能力）
-    output_path = os.path.join(config.upscale_cache_dir,filename)
+    filename = str(random.random()) # 使用随机数确保并发处理时不会互相冲突（假装具有并发处理能力）
+    output_path = os.path.join(config.upscale_cache_dir,f'{filename}.{config.upscale_output_ext}')
     for i in image_urls:
         try:
             resp = urlopen(i)
